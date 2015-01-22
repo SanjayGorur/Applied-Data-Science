@@ -1,0 +1,28 @@
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.122
+Model:                            WLS   Adj. R-squared:                  0.099
+Method:                 Least Squares   F-statistic:                     5.159
+Date:                Thu, 09 Oct 2014   Prob (F-statistic):           0.000641
+Time:                        02:00:25   Log-Likelihood:                -655.12
+No. Observations:                 153   AIC:                             1320.
+Df Residuals:                     148   BIC:                             1335.
+Df Model:                           4                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-------------------------------------------------------------------------------------
+const             -3162.4658   1079.774     -2.929      0.004     -5296.231 -1028.701
+policy_index          4.1664      8.000      0.521      0.603       -11.642    19.975
+females_education    77.4364     22.276      3.476      0.001        33.416   121.457
+life_expectancy      -7.4055      2.443     -3.031      0.003       -12.234    -2.577
+new_data             -0.6025     17.536     -0.034      0.973       -35.255    34.050
+==============================================================================
+Omnibus:                       87.623   Durbin-Watson:                   0.798
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              373.822
+Skew:                           2.214   Prob(JB):                     6.69e-82
+Kurtosis:                       9.248   Cond. No.                     4.99e+03
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 4.99e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

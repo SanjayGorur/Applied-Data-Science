@@ -1,0 +1,60 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.153
+Model:                            OLS   Adj. R-squared:                  0.130
+Method:                 Least Squares   F-statistic:                     6.683
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):           5.68e-05
+Time:                        19:50:51   Log-Likelihood:                -1037.2
+No. Observations:                 153   AIC:                             2084.
+Df Residuals:                     148   BIC:                             2100.
+Df Model:                           4                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------------
+Intercept          -3407.2866   1153.837     -2.953      0.004     -5687.410 -1127.163
+persons_prosecuted    -0.0029      0.005     -0.555      0.580        -0.013     0.007
+child_victims          0.3980      0.208      1.913      0.058        -0.013     0.809
+gdp                 8.754e-12   8.38e-12      1.044      0.298     -7.81e-12  2.53e-11
+policy_index          -0.3600      8.523     -0.042      0.966       -17.203    16.483
+females_education     82.6792     23.400      3.533      0.001        36.438   128.920
+life_expectancy       -7.1481      2.466     -2.899      0.004       -12.021    -2.275
+==============================================================================
+Omnibus:                       91.217   Durbin-Watson:                   0.738
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              417.753
+Skew:                           2.289   Prob(JB):                     1.93e-91
+Kurtosis:                       9.676   Cond. No.                          nan
+==============================================================================
+
+Warnings:
+[1] The smallest eigenvalue is -6.49e+08. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.454
+Model:                            OLS   Adj. R-squared:                  0.432
+Method:                 Least Squares   F-statistic:                     20.27
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):           3.63e-17
+Time:                        19:50:51   Log-Likelihood:                -1003.6
+No. Observations:                 153   AIC:                             2021.
+Df Residuals:                     146   BIC:                             2042.
+Df Model:                           6                                         
+================================================================================================
+                                   coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------------------------
+Intercept                    -1.001e+04   3555.325     -2.815      0.006      -1.7e+04 -2981.212
+np.log1p(persons_prosecuted)    29.3962      7.357      3.995      0.000        14.855    43.937
+np.log1p(child_victims)         24.5572      7.602      3.231      0.002         9.534    39.581
+np.log1p(gdp)                  -32.4480      3.509     -9.246      0.000       -39.384   -25.512
+np.log1p(policy_index)          82.4559     53.638      1.537      0.126       -23.552   188.464
+np.log1p(females_education)   2615.0982    911.383      2.869      0.005       813.891  4416.306
+np.log1p(life_expectancy)       97.1963    137.693      0.706      0.481      -174.932   369.325
+==============================================================================
+Omnibus:                       68.088   Durbin-Watson:                   1.049
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              198.134
+Skew:                           1.820   Prob(JB):                     9.46e-44
+Kurtosis:                       7.222   Cond. No.                     6.52e+03
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 6.52e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

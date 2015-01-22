@@ -1,0 +1,36 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                      -0.315
+Model:                            OLS   Adj. R-squared:                 -0.315
+Method:                 Least Squares   F-statistic:                      -inf
+Date:                Thu, 09 Oct 2014   Prob (F-statistic):                nan
+Time:                        00:17:07   Log-Likelihood:                -1070.9
+No. Observations:                 153   AIC:                             2144.
+Df Residuals:                     152   BIC:                             2147.
+Df Model:                           0                                         
+===============================================================================================
+                                  coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-----------------------------------------------------------------------------------------------
+Intercept                    7.208e-48   1.28e-47      0.563      0.574     -1.81e-47  3.25e-47
+gdp                         -3.066e-37   5.44e-37     -0.563      0.574     -1.38e-36  7.69e-37
+policy_index                -2.808e-74   6.99e-74     -0.402      0.688     -1.66e-73   1.1e-73
+females_education            3.482e-46   6.18e-46      0.563      0.574     -8.73e-46  1.57e-45
+life_expectancy              4.694e-46   8.34e-46      0.563      0.574     -1.18e-45  2.12e-45
+I(gdp ** 2.0)                3.778e-24   6.71e-24      0.563      0.574     -9.48e-24   1.7e-23
+I(policy_index ** 2.0)       6.994e-46   1.24e-45      0.563      0.574     -1.75e-45  3.15e-45
+I(females_education ** 2.0)  1.683e-44   2.99e-44      0.563      0.574     -4.22e-44  7.59e-44
+I(life_expectancy ** 2.0)      3.1e-44   5.51e-44      0.563      0.574     -7.78e-44   1.4e-43
+I(gdp ** 3.0)               -2.197e-37   5.47e-37     -0.402      0.688      -1.3e-36  8.61e-37
+I(policy_index ** 3.0)        7.37e-45   1.31e-44      0.563      0.574     -1.85e-44  3.32e-44
+I(females_education ** 3.0)  8.132e-43   1.44e-42      0.563      0.574     -2.04e-42  3.67e-42
+I(life_expectancy ** 3.0)    2.075e-42   3.69e-42      0.563      0.574     -5.21e-42  9.36e-42
+==============================================================================
+Omnibus:                      110.367   Durbin-Watson:                   0.569
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              656.897
+Skew:                           2.782   Prob(JB):                    2.27e-143
+Kurtosis:                      11.490   Cond. No.                          nan
+==============================================================================
+
+Warnings:
+[1] The smallest eigenvalue is -0.028. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

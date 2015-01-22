@@ -1,0 +1,135 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.106
+Model:                            OLS   Adj. R-squared:                  0.089
+Method:                 Least Squares   F-statistic:                     6.142
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):           0.000567
+Time:                        18:24:05   Log-Likelihood:                -1280.2
+No. Observations:                 158   AIC:                             2566.
+Df Residuals:                     155   BIC:                             2576.
+Df Model:                           3                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-------------------------------------------------------------------------------------
+gdp               -3.425e-12   3.06e-11     -0.112      0.911     -6.38e-11   5.7e-11
+policy_index         19.3717     31.154      0.622      0.535       -42.169    80.913
+life_expectancy       4.5127      8.912      0.506      0.613       -13.092    22.117
+females_education    -4.4773     11.804     -0.379      0.705       -27.795    18.840
+==============================================================================
+Omnibus:                      198.128   Durbin-Watson:                   0.777
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5932.011
+Skew:                           5.132   Prob(JB):                         0.00
+Kurtosis:                      31.208   Cond. No.                     1.20e+12
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.2e+12. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Parameters: gdp                 -3.425145e-12
+policy_index         1.937171e+01
+life_expectancy      4.512711e+00
+females_education   -4.477272e+00
+dtype: float64
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          child_victims   R-squared:                       0.166
+Model:                            OLS   Adj. R-squared:                  0.150
+Method:                 Least Squares   F-statistic:                     10.28
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):           3.27e-06
+Time:                        18:24:05   Log-Likelihood:                -929.66
+No. Observations:                 158   AIC:                             1865.
+Df Residuals:                     155   BIC:                             1875.
+Df Model:                           3                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-------------------------------------------------------------------------------------
+gdp               -2.586e-12   3.33e-12     -0.777      0.438     -9.16e-12  3.99e-12
+policy_index          5.2575      3.389      1.551      0.123        -1.437    11.952
+life_expectancy      -1.8386      0.969     -1.896      0.060        -3.754     0.077
+females_education     2.2016      1.284      1.714      0.088        -0.335     4.738
+==============================================================================
+Omnibus:                      154.215   Durbin-Watson:                   0.857
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2243.709
+Skew:                           3.726   Prob(JB):                         0.00
+Kurtosis:                      19.890   Cond. No.                     1.20e+12
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.2e+12. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Parameters: gdp                 -2.586435e-12
+policy_index         5.257530e+00
+life_expectancy     -1.838591e+00
+females_education    2.201553e+00
+dtype: float64
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:     persons_prosecuted   R-squared:                       0.034
+Model:                            OLS   Adj. R-squared:                  0.015
+Method:                 Least Squares   F-statistic:                     1.828
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):              0.144
+Time:                        18:24:05   Log-Likelihood:                -1510.8
+No. Observations:                 158   AIC:                             3028.
+Df Residuals:                     155   BIC:                             3037.
+Df Model:                           3                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-------------------------------------------------------------------------------------
+gdp                5.426e-12   1.32e-10      0.041      0.967     -2.55e-10  2.65e-10
+policy_index        101.7509    134.108      0.759      0.449      -163.163   366.665
+life_expectancy     -32.9970     38.363     -0.860      0.391      -108.779    42.785
+females_education    36.2056     50.813      0.713      0.477       -64.169   136.581
+==============================================================================
+Omnibus:                      224.600   Durbin-Watson:                   0.538
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            10002.180
+Skew:                           6.162   Prob(JB):                         0.00
+Kurtosis:                      39.979   Cond. No.                     1.20e+12
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.2e+12. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Parameters: gdp                  5.425977e-12
+policy_index         1.017509e+02
+life_expectancy     -3.299698e+01
+females_education    3.620564e+01
+dtype: float64
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                Victims   R-squared:                       0.130
+Model:                            OLS   Adj. R-squared:                  0.113
+Method:                 Least Squares   F-statistic:                     7.727
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):           7.63e-05
+Time:                        18:24:05   Log-Likelihood:                -1280.6
+No. Observations:                 158   AIC:                             2567.
+Df Residuals:                     155   BIC:                             2576.
+Df Model:                           3                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-------------------------------------------------------------------------------------
+gdp               -6.012e-12   3.07e-11     -0.196      0.845     -6.66e-11  5.46e-11
+policy_index         24.6292     31.233      0.789      0.432       -37.068    86.326
+life_expectancy       2.6741      8.935      0.299      0.765       -14.975    20.323
+females_education    -2.2757     11.834     -0.192      0.848       -25.652    21.101
+==============================================================================
+Omnibus:                      194.374   Durbin-Watson:                   0.759
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5518.441
+Skew:                           4.994   Prob(JB):                         0.00
+Kurtosis:                      30.175   Cond. No.                     1.20e+12
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.2e+12. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Parameters: gdp                 -6.011580e-12
+policy_index         2.462924e+01
+life_expectancy      2.674120e+00
+females_education   -2.275719e+00
+dtype: float64
+
+
+R^2 of results_victims 0.106242258731
+R^2 of results_childvictims 0.165971808749
+R^2 of results_prosecuted 0.0341707197668
+R^2 of results_totalvictims 0.130103647214
+(-0.048430976740660318, 0.54565160155960302)

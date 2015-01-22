@@ -1,0 +1,15 @@
+Optimization terminated successfully.
+         Current function value: 0.484875
+         Iterations 6
+
+
+LINEAR: Estimated number of people which is Union : 9217
+LOGIT : Estimated number of people which is Union : 8230
+Optimization terminated successfully.
+         Current function value: 0.522110
+         Iterations 6
+
+
+LINEAR: Estimated number of people which is Union : 9968
+LOGIT : Estimated number of people which is Union : 9421
+REAL DATA : Actual number of people which is Union : 3323

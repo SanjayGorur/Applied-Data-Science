@@ -1,0 +1,65 @@
+Iteration: 1 Error 21.5551228717
+Iteration: 2 Error 7.50118747247
+Iteration: 3 Error 2.98968997142
+Iteration: 4 Error 1.30703545109
+Iteration: 5 Error 0.333462683139
+Iteration: 6 Error 0.185869848697
+Iteration: 7 Error 0.0906517051175
+Iteration: 8 Error 0.0347252988332
+Iteration: 9 Error 0.0490955598894
+Iteration: 10 Error 0.0511514142104
+Iteration: 11 Error 0.0230857485388
+Iteration: 12 Error 0.00659586437438
+Iteration: 13 Error 0.0085718009534
+Iteration: 14 Error 0.00371306381007
+Iteration: 15 Error 0.00316918624276
+Iteration: 16 Error 0.00445455993754
+Iteration: 17 Error 0.00421822529708
+Iteration: 18 Error 0.00283684855497
+Iteration: 19 Error 0.00294844528126
+Iteration: 20 Error 0.00228657786467
+Iteration: 21 Error 0.00263203084706
+Iteration: 22 Error 0.0013056770939
+Iteration: 23 Error 0.00163992935601
+Iteration: 24 Error 0.00139250016662
+Iteration: 25 Error 0.000971504952088
+Iteration: 26 Error 0.00077210163921
+Iteration: 27 Error 0.000776156160838
+Iteration: 28 Error 0.00107729854799
+Iteration: 29 Error 0.000577887772401
+Iteration: 30 Error 0.000741322483737
+Iteration: 31 Error 0.000731051532154
+Iteration: 32 Error 0.000796185192202
+Iteration: 33 Error 0.000944247637135
+Iteration: 34 Error 0.000476827522696
+Iteration: 35 Error 0.000490253726383
+Iteration: 36 Error 0.000353962157144
+Iteration: 37 Error 0.00025889344593
+Iteration: 38 Error 0.000585526122074
+Iteration: 39 Error 0.000394293129581
+Iteration: 40 Error 0.000413773285573
+Iteration: 41 Error 0.000407980253887
+Iteration: 42 Error 0.000285451126633
+Iteration: 43 Error 0.000278468533766
+Iteration: 44 Error 0.000326372193107
+Iteration: 45 Error 0.000201246622268
+Iteration: 46 Error 0.000199477345884
+Iteration: 47 Error 0.000226805219559
+Iteration: 48 Error 0.000147696352253
+Iteration: 49 Error 0.000137449677568
+Iteration: 50 Error 0.000156478862141
+Iteration: 51 Error 0.000150692125433
+Iteration: 52 Error 0.000158173416096
+Iteration: 53 Error 0.000151655173991
+Iteration: 54 Error 0.00013917356801
+Iteration: 55 Error 0.000155068469612
+Iteration: 56 Error 0.000109737860283
+Iteration: 57 Error 9.90877038239e-05
+
+Result:  [ 17.22002369]
+
+Result:  [ 17.38340649]
+
+Result:  [ 8.77882067]
+
+Result:  [ 7.29167152]

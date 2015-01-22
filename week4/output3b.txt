@@ -1,0 +1,53 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  union   R-squared:                       0.045
+Model:                            OLS   Adj. R-squared:                  0.045
+Method:                 Least Squares   F-statistic:                     204.8
+Date:                Thu, 25 Sep 2014   Prob (F-statistic):          2.98e-256
+Time:                        18:16:49   Log-Likelihood:                -13562.
+No. Observations:               26200   AIC:                         2.714e+04
+Df Residuals:                   26193   BIC:                         2.720e+04
+Df Model:                           6                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1714      0.052      3.277      0.001         0.069     0.274
+year          -0.0029      0.001     -3.183      0.001        -0.005    -0.001
+age            0.0044      0.001      5.240      0.000         0.003     0.006
+grade          0.0121      0.001     11.283      0.000         0.010     0.014
+south         -0.1421      0.005    -26.236      0.000        -0.153    -0.131
+black          0.1442      0.006     24.148      0.000         0.132     0.156
+smsa           0.0159      0.006      2.781      0.005         0.005     0.027
+==============================================================================
+Omnibus:                     4332.120   Durbin-Watson:                   1.987
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6880.188
+Skew:                           1.252   Prob(JB):                         0.00
+Kurtosis:                       2.815   Cond. No.                     1.90e+03
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.9e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Optimization terminated successfully.
+         Current function value: 0.506056
+         Iterations 6
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                  union   No. Observations:                26200
+Model:                          Logit   Df Residuals:                    26193
+Method:                           MLE   Df Model:                            6
+Date:                Thu, 25 Sep 2014   Pseudo R-squ.:                 0.04368
+Time:                        18:16:49   Log-Likelihood:                -13259.
+converged:                       True   LL-Null:                       -13864.
+                                        LLR p-value:                1.894e-258
+==============================================================================
+                 coef    std err          z      P>|z|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -1.5927      0.318     -5.016      0.000        -2.215    -0.970
+year          -0.0180      0.006     -3.270      0.001        -0.029    -0.007
+age            0.0269      0.005      5.293      0.000         0.017     0.037
+grade          0.0744      0.007     11.265      0.000         0.061     0.087
+south         -0.9013      0.035    -25.440      0.000        -0.971    -0.832
+black          0.8535      0.036     23.994      0.000         0.784     0.923
+smsa           0.0890      0.036      2.445      0.014         0.018     0.160
+==============================================================================

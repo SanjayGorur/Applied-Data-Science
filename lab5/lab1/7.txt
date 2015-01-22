@@ -1,0 +1,28 @@
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.128
+Model:                            WLS   Adj. R-squared:                  0.116
+Method:                 Least Squares   F-statistic:                     11.02
+Date:                Thu, 09 Oct 2014   Prob (F-statistic):           3.44e-05
+Time:                        01:13:24   Log-Likelihood:                -654.63
+No. Observations:                 153   AIC:                             1315.
+Df Residuals:                     150   BIC:                             1324.
+Df Model:                           2                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-------------------------------------------------------------------------------------
+const             -2951.2832   1089.960     -2.708      0.008     -5104.940  -797.626
+gdp                8.351e-12   8.44e-12      0.989      0.324     -8.33e-12   2.5e-11
+policy_index          0.9748      8.546      0.114      0.909       -15.912    17.861
+females_education    74.1763     22.284      3.329      0.001        30.146   118.207
+life_expectancy      -7.8345      2.436     -3.217      0.002       -12.647    -3.022
+==============================================================================
+Omnibus:                       88.244   Durbin-Watson:                   0.797
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              379.683
+Skew:                           2.229   Prob(JB):                     3.57e-83
+Kurtosis:                       9.299   Cond. No.                     1.54e+14
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.54e+14. This might indicate that there are
+strong multicollinearity or other numerical problems.

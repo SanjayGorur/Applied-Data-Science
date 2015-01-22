@@ -1,0 +1,124 @@
+{\rtf1\ansi\deff0\deftab480
+
+{\fonttbl
+{\f000 Courier New;}
+{\f001 Courier New;}
+{\f002 Courier New;}
+{\f003 Courier New;}
+{\f004 Courier New;}
+{\f005 Courier New;}
+{\f006 Courier New;}
+{\f007 Courier New;}
+{\f008 Courier New;}
+{\f009 Courier New;}
+{\f010 Courier New;}
+}
+
+{\colortbl
+\red000\green000\blue000;
+\red255\green255\blue255;
+\red000\green128\blue000;
+\red255\green255\blue255;
+\red255\green000\blue000;
+\red255\green255\blue255;
+\red128\green128\blue128;
+\red255\green255\blue255;
+\red128\green128\blue128;
+\red255\green255\blue255;
+\red000\green000\blue255;
+\red255\green255\blue255;
+\red255\green000\blue255;
+\red255\green255\blue255;
+\red000\green000\blue128;
+\red255\green255\blue255;
+\red000\green000\blue000;
+\red255\green255\blue255;
+\red000\green128\blue000;
+\red255\green255\blue255;
+\red000\green000\blue000;
+\red255\green255\blue255;
+}
+
+\f0\fs20\cb21\cf20 \highlight19\cf18 ##############################################\highlight1\cf0 \par
+\highlight19\cf18 ##############################################\highlight1\cf0 \par
+\highlight3\cf2 #      Applied Data Science GX5004           # \highlight1\cf0 \par
+\highlight3\cf2 #      Lab 2                                 #\highlight1\cf0 \par
+\highlight3\cf2 #      Dimas Rinarso Putro | drp354@nyu.edu  #\highlight1\cf0 \par
+\highlight3\cf2 #      No.1b                                 #\highlight1\cf0 \par
+\highlight19\cf18 ##############################################\highlight1\cf0 \par
+\par
+\highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight1\cf0 \par
+\highlight11\cf10\b from\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight15\cf14\b .\highlight17\cf16\b0 datasets\highlight1\cf0  \highlight11\cf10\b import\highlight1\cf0\b0  \highlight15\cf14\b *\highlight1\cf0\b0 \par
+\highlight11\cf10\b from\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight15\cf14\b .\highlight17\cf16\b0 tools\highlight15\cf14\b .\highlight17\cf16\b0 shortcuts\highlight1\cf0  \highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 buildNetwork\highlight1\cf0 \par
+\highlight11\cf10\b from\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight15\cf14\b .\highlight17\cf16\b0 supervised\highlight15\cf14\b .\highlight17\cf16\b0 trainers\highlight1\cf0  \highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 BackpropTrainer\highlight1\cf0 \par
+\highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 pickle\highlight1\cf0 \par
+\par
+\highlight11\cf10\b def\highlight1\cf0\b0  \highlight13\cf12 estimateAnd\highlight15\cf14\b ():\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_and\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_and\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_and\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_and\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_and\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_and\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 net\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 buildNetwork\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 10\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 bias\highlight15\cf14\b =\highlight11\cf10 True\highlight15\cf14 )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 BackpropTrainer\highlight15\cf14\b (\highlight17\cf16\b0 net\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 learningrate\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.01\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 momentum\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.99\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 trainOnDataset\highlight15\cf14\b (\highlight17\cf16\b0 ds_and\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 3000\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 testOnData\highlight15\cf14\b ()\highlight1\cf0\b0  \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '\\nthe prediction for AND value:'\highlight1\cf0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '1 AND 1 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '1 AND 0 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '0 AND 1 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '0 AND 0 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+\par
+\highlight11\cf10\b def\highlight1\cf0\b0  \highlight13\cf12 estimateOr\highlight15\cf14\b ():\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_or\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_or\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_or\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_or\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_or\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_or\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 net\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 buildNetwork\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 10\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 bias\highlight15\cf14\b =\highlight11\cf10 True\highlight15\cf14 )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 BackpropTrainer\highlight15\cf14\b (\highlight17\cf16\b0 net\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 learningrate\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.01\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 momentum\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.99\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 trainOnDataset\highlight15\cf14\b (\highlight17\cf16\b0 ds_or\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 3000\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 testOnData\highlight15\cf14\b ()\highlight1\cf0\b0  \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '\\nthe prediction for OR value:'\highlight1\cf0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '1 OR 1 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '1 OR 0 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '0 OR 1 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '0 OR 0 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+\par
+\highlight11\cf10\b def\highlight1\cf0\b0  \highlight13\cf12 estimateNot\highlight15\cf14\b ():\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_not\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_not\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,)\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_not\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,)\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 net\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 buildNetwork\highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 10\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 bias\highlight15\cf14\b =\highlight11\cf10 True\highlight15\cf14 )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 BackpropTrainer\highlight15\cf14\b (\highlight17\cf16\b0 net\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 learningrate\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.01\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 momentum\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.99\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 trainOnDataset\highlight15\cf14\b (\highlight17\cf16\b0 ds_not\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 3000\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 testOnData\highlight15\cf14\b ()\highlight1\cf0\b0  \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '\\nthe prediction for NOT value:'\highlight1\cf0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 'NOT 0  = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 'NOT 1  = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 1\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+\par
+\highlight11\cf10\b def\highlight1\cf0\b0  \highlight13\cf12 estimateNor\highlight15\cf14\b ():\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_nor\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_nor\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_nor\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_nor\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds_nor\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b )\highlight1\cf0\b0  \highlight15\cf14\b ,\highlight1\cf0\b0  \highlight15\cf14\b (\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 net\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 buildNetwork\highlight15\cf14\b (\highlight5\cf4\b0 2\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 10\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 bias\highlight15\cf14\b =\highlight11\cf10 True\highlight15\cf14 )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 BackpropTrainer\highlight15\cf14\b (\highlight17\cf16\b0 net\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 learningrate\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.01\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 momentum\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0.99\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 trainOnDataset\highlight15\cf14\b (\highlight17\cf16\b0 ds_nor\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight5\cf4 3000\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 testOnData\highlight15\cf14\b ()\highlight1\cf0\b0  \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '\\nthe prediction for NOR value:'\highlight1\cf0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '1 NOR 1 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '1 NOR 0 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 1\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '0 NOR 1 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 1\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '0 NOR 0 = '\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b ((\highlight5\cf4\b0 0\highlight15\cf14\b ,\highlight5\cf4\b0 0\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+\par
+\par
+\highlight11\cf10\b if\highlight1\cf0\b0  \highlight17\cf16 __name__\highlight1\cf0  \highlight15\cf14\b ==\highlight1\cf0\b0  \highlight7\cf6 "__main__"\highlight15\cf14\b :\highlight1\cf0\b0 \par
+   \highlight17\cf16 estimateAnd\highlight15\cf14\b ()\highlight1\cf0\b0 \par
+   \highlight17\cf16 estimateOr\highlight15\cf14\b ()\highlight1\cf0\b0 \par
+   \highlight17\cf16 estimateNot\highlight15\cf14\b ()\highlight1\cf0\b0 \par
+   \highlight17\cf16 estimateNor\highlight15\cf14\b ()\highlight1\cf0\b0 \par
+}

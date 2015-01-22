@@ -1,0 +1,27 @@
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.068
+Model:                            WLS   Adj. R-squared:                  0.062
+Method:                 Least Squares   F-statistic:                     11.00
+Date:                Thu, 09 Oct 2014   Prob (F-statistic):            0.00114
+Time:                        01:24:25   Log-Likelihood:                -659.73
+No. Observations:                 153   AIC:                             1323.
+Df Residuals:                     151   BIC:                             1330.
+Df Model:                           1                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [95.0% Conf. Int.]
+-------------------------------------------------------------------------------------
+const             -3234.0203   1119.527     -2.889      0.004     -5445.980 -1022.061
+gdp                3.381e-12   8.55e-12      0.395      0.693     -1.35e-11  2.03e-11
+policy_index         -6.4931      8.475     -0.766      0.445       -23.239    10.253
+females_education    70.9854     22.940      3.094      0.002        25.660   116.311
+==============================================================================
+Omnibus:                       92.489   Durbin-Watson:                   0.773
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              401.920
+Skew:                           2.365   Prob(JB):                     5.30e-88
+Kurtosis:                       9.377   Cond. No.                     1.53e+14
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.53e+14. This might indicate that there are
+strong multicollinearity or other numerical problems.

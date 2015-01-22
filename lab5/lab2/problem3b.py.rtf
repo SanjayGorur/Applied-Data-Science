@@ -1,0 +1,149 @@
+{\rtf1\ansi\deff0\deftab480
+
+{\fonttbl
+{\f000 Courier New;}
+{\f001 Courier New;}
+{\f002 Courier New;}
+{\f003 Courier New;}
+{\f004 Courier New;}
+{\f005 Courier New;}
+{\f006 Courier New;}
+{\f007 Courier New;}
+{\f008 Courier New;}
+{\f009 Courier New;}
+{\f010 Courier New;}
+}
+
+{\colortbl
+\red000\green000\blue000;
+\red255\green255\blue255;
+\red000\green128\blue000;
+\red255\green255\blue255;
+\red255\green000\blue000;
+\red255\green255\blue255;
+\red128\green128\blue128;
+\red255\green255\blue255;
+\red128\green128\blue128;
+\red255\green255\blue255;
+\red000\green000\blue255;
+\red255\green255\blue255;
+\red255\green000\blue255;
+\red255\green255\blue255;
+\red000\green000\blue128;
+\red255\green255\blue255;
+\red000\green000\blue000;
+\red255\green255\blue255;
+\red000\green128\blue000;
+\red255\green255\blue255;
+\red000\green000\blue000;
+\red255\green255\blue255;
+}
+
+\f0\fs20\cb21\cf20 \highlight19\cf18 ##############################################\highlight1\cf0 \par
+\highlight19\cf18 ##############################################\highlight1\cf0 \par
+\highlight3\cf2 #      Applied Data Science GX5004           # \highlight1\cf0 \par
+\highlight3\cf2 #      Lab 2                                 #\highlight1\cf0 \par
+\highlight3\cf2 #      Dimas Rinarso Putro | drp354@nyu.edu  #\highlight1\cf0 \par
+\highlight3\cf2 #      No.3a                                 #\highlight1\cf0 \par
+\highlight19\cf18 ##############################################\highlight1\cf0 \par
+\par
+\highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 sys\highlight1\cf0 \par
+\highlight17\cf16 sys\highlight15\cf14\b .\highlight17\cf16\b0 path\highlight15\cf14\b .\highlight17\cf16\b0 append\highlight15\cf14\b (\highlight9\cf8\b0 '/usr/local/lib/python2.7/site-packages'\highlight15\cf14\b )\highlight1\cf0\b0  \par
+\highlight11\cf10\b from\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight15\cf14\b .\highlight17\cf16\b0 datasets\highlight15\cf14\b .\highlight17\cf16\b0 supervised\highlight1\cf0  \highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight1\cf0  \par
+\highlight11\cf10\b from\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight15\cf14\b .\highlight17\cf16\b0 tools\highlight15\cf14\b .\highlight17\cf16\b0 shortcuts\highlight1\cf0  \highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 buildNetwork\highlight1\cf0 \par
+\highlight11\cf10\b from\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight15\cf14\b .\highlight17\cf16\b0 supervised\highlight15\cf14\b .\highlight17\cf16\b0 trainers\highlight1\cf0  \highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 BackpropTrainer\highlight1\cf0 \par
+\highlight11\cf10\b from\highlight1\cf0\b0  \highlight17\cf16 pybrain\highlight15\cf14\b .\highlight17\cf16\b0 structure\highlight15\cf14\b .\highlight17\cf16\b0 modules\highlight1\cf0    \highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 SoftmaxLayer\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 SigmoidLayer\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 LinearLayer\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 TanhLayer\highlight1\cf0 \par
+\highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 pickle\highlight1\cf0 \par
+\highlight11\cf10\b import\highlight1\cf0\b0  \highlight17\cf16 cv2\highlight1\cf0 \par
+\par
+\highlight11\cf10\b def\highlight1\cf0\b0  \highlight13\cf12 loadImage\highlight15\cf14\b (\highlight17\cf16\b0 path\highlight15\cf14\b ):\highlight1\cf0\b0 \par
+    \highlight17\cf16 im\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 cv2\highlight15\cf14\b .\highlight17\cf16\b0 imread\highlight15\cf14\b (\highlight17\cf16\b0 path\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight11\cf10\b return\highlight1\cf0\b0  \highlight17\cf16 flatten\highlight15\cf14\b (\highlight17\cf16\b0 im\highlight15\cf14\b )\highlight1\cf0\b0 \par
+ \par
+\highlight11\cf10\b def\highlight1\cf0\b0  \highlight13\cf12 flatten\highlight15\cf14\b (\highlight17\cf16\b0 x\highlight15\cf14\b ):\highlight1\cf0\b0 \par
+    \highlight17\cf16 result\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight15\cf14\b []\highlight1\cf0\b0 \par
+    \highlight11\cf10\b for\highlight1\cf0\b0  \highlight17\cf16 el\highlight1\cf0  \highlight11\cf10\b in\highlight1\cf0\b0  \highlight17\cf16 x\highlight15\cf14\b :\highlight1\cf0\b0 \par
+        \highlight11\cf10\b if\highlight1\cf0\b0  \highlight17\cf16 hasattr\highlight15\cf14\b (\highlight17\cf16\b0 el\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight7\cf6 "__iter__"\highlight15\cf14\b )\highlight1\cf0\b0  \highlight11\cf10\b and\highlight1\cf0\b0  \highlight11\cf10\b not\highlight1\cf0\b0  \highlight17\cf16 isinstance\highlight15\cf14\b (\highlight17\cf16\b0 el\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 basestring\highlight15\cf14\b ):\highlight1\cf0\b0 \par
+            \highlight17\cf16 result\highlight15\cf14\b .\highlight17\cf16\b0 extend\highlight15\cf14\b (\highlight17\cf16\b0 flatten\highlight15\cf14\b (\highlight17\cf16\b0 el\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+        \highlight11\cf10\b else\highlight15\cf14 :\highlight1\cf0\b0 \par
+            \highlight17\cf16 result\highlight15\cf14\b .\highlight17\cf16\b0 append\highlight15\cf14\b (\highlight17\cf16\b0 el\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight11\cf10\b return\highlight1\cf0\b0  \highlight17\cf16 result\highlight1\cf0 \par
+\par
+\highlight11\cf10\b def\highlight1\cf0\b0  \highlight13\cf12 detect\highlight15\cf14\b (\highlight17\cf16\b0 value\highlight15\cf14\b ):\highlight1\cf0\b0 \par
+    \highlight11\cf10\b if\highlight1\cf0\b0  \highlight15\cf14\b (-\highlight5\cf4\b0 5\highlight15\cf14\b )<\highlight17\cf16\b0 value\highlight15\cf14\b <=\highlight5\cf4\b0 5\highlight15\cf14\b :\highlight1\cf0\b0 \par
+        \highlight17\cf16 animal\highlight15\cf14\b =\highlight9\cf8\b0 'giraffe'\highlight1\cf0 \par
+    \highlight11\cf10\b elif\highlight1\cf0\b0  \highlight5\cf4 5\highlight15\cf14\b <\highlight17\cf16\b0 value\highlight15\cf14\b <=\highlight5\cf4\b0 15\highlight15\cf14\b :\highlight1\cf0\b0 \par
+        \highlight17\cf16 animal\highlight15\cf14\b =\highlight9\cf8\b0 'dog'\highlight1\cf0 \par
+    \highlight11\cf10\b elif\highlight1\cf0\b0  \highlight5\cf4 15\highlight15\cf14\b <\highlight17\cf16\b0 value\highlight15\cf14\b <=\highlight5\cf4\b0 25\highlight15\cf14\b :\highlight1\cf0\b0 \par
+        \highlight17\cf16 animal\highlight15\cf14\b =\highlight9\cf8\b0 'gorilla'\highlight1\cf0 \par
+    \highlight11\cf10\b elif\highlight1\cf0\b0  \highlight5\cf4 25\highlight15\cf14\b <\highlight17\cf16\b0 value\highlight15\cf14\b <=\highlight5\cf4\b0 35\highlight15\cf14\b :\highlight1\cf0\b0 \par
+        \highlight17\cf16 animal\highlight15\cf14\b =\highlight9\cf8\b0 'alligator'\highlight1\cf0 \par
+    \highlight11\cf10\b elif\highlight1\cf0\b0  \highlight5\cf4 35\highlight15\cf14\b <\highlight17\cf16\b0 value\highlight15\cf14\b <=\highlight5\cf4\b0 45\highlight15\cf14\b :\highlight1\cf0\b0 \par
+        \highlight17\cf16 animal\highlight15\cf14\b =\highlight9\cf8\b0 'cat'\highlight1\cf0 \par
+    \highlight11\cf10\b else\highlight15\cf14 :\highlight1\cf0\b0 \par
+        \highlight17\cf16 animal\highlight15\cf14\b =\highlight9\cf8\b0 'cannot detect'\highlight1\cf0 \par
+    \highlight11\cf10\b return\highlight1\cf0\b0  \highlight17\cf16 animal\highlight1\cf0 \par
+\par
+\highlight11\cf10\b if\highlight1\cf0\b0  \highlight17\cf16 __name__\highlight1\cf0  \highlight15\cf14\b ==\highlight1\cf0\b0  \highlight7\cf6 "__main__"\highlight15\cf14\b :\highlight1\cf0\b0 \par
+ \par
+    \highlight17\cf16 t\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/giraffe1.png'\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight3\cf2 #net = buildNetwork(len(t),.02*len(t), .02*len(t), 1)\highlight1\cf0 \par
+    \highlight3\cf2 #net = buildNetwork(len(t), .03*len(t),.03*len(t),.03*len(t),1, hiddenclass=SoftmaxLayer, bias = True)\highlight1\cf0 \par
+    \highlight17\cf16 net\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 buildNetwork\highlight15\cf14\b (\highlight17\cf16\b0 len\highlight15\cf14\b (\highlight17\cf16\b0 t\highlight15\cf14\b ),\highlight1\cf0\b0  \highlight5\cf4 .03\highlight15\cf14\b *\highlight17\cf16\b0 len\highlight15\cf14\b (\highlight17\cf16\b0 t\highlight15\cf14\b ),\highlight5\cf4\b0 .03\highlight15\cf14\b *\highlight17\cf16\b0 len\highlight15\cf14\b (\highlight17\cf16\b0 t\highlight15\cf14\b ),\highlight5\cf4\b0 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight3\cf2 #net = buildNetwork(len(t), .03*len(t), 1)\highlight1\cf0 \par
+    \highlight3\cf2 #net = buildNetwork(len(t), .03*len(t), 1, hiddenclass=TanhLayer, bias = True)\highlight1\cf0 \par
+    \highlight3\cf2 #net = buildNetwork(2, 4, 1, bias=True)\highlight1\cf0 \par
+    \highlight17\cf16 ds\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 SupervisedDataSet\highlight15\cf14\b (\highlight17\cf16\b0 len\highlight15\cf14\b (\highlight17\cf16\b0 t\highlight15\cf14\b ),\highlight1\cf0\b0  \highlight5\cf4 1\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/giraffe1.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/giraffe2.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/giraffe3.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/giraffe4.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/giraffe5.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 0\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight3\cf2 #ds.addSample(loadImage('pic/giraffe6.png'),(0,))\highlight1\cf0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/dog1.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 10\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/dog2.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 10\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/dog3.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 10\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/dog4.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 10\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/dog5.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 10\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight3\cf2 #ds.addSample(loadImage('pic/dog6.png'),(10,))\highlight1\cf0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/gorilla1.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 20\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/gorilla2.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 20\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/gorilla3.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 20\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/gorilla4.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 20\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/gorilla5.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 20\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight3\cf2 #ds.addSample(loadImage('pic/gorilla6.png'),(20,))\highlight1\cf0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/alligator1.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 30\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/alligator2.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 30\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/alligator3.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 30\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/alligator4.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 30\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/alligator5.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 30\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight3\cf2 #ds.addSample(loadImage('pic/alligator6.png'),(30,))\highlight1\cf0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/cat1.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 40\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/cat2.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 40\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/cat3.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 40\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/cat4.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 40\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight17\cf16 ds\highlight15\cf14\b .\highlight17\cf16\b0 addSample\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight9\cf8\b0 'pic/cat5.png'\highlight15\cf14\b ),(\highlight5\cf4\b0 40\highlight15\cf14\b ,))\highlight1\cf0\b0 \par
+    \highlight3\cf2 #ds.addSample(loadImage('pic/cat6.png'),(40,))\highlight1\cf0 \par
+    \highlight17\cf16 trainer\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 BackpropTrainer\highlight15\cf14\b (\highlight17\cf16\b0 net\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 ds\highlight15\cf14\b )\highlight1\cf0\b0 \par
+    \highlight17\cf16 error\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 10\highlight1\cf0 \par
+    \highlight17\cf16 iteration\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight5\cf4 0\highlight1\cf0 \par
+    \highlight11\cf10\b while\highlight1\cf0\b0  \highlight17\cf16 error\highlight1\cf0  \highlight15\cf14\b >\highlight1\cf0\b0  \highlight5\cf4 0.0001\highlight15\cf14\b :\highlight1\cf0\b0  \par
+        \highlight17\cf16 error\highlight1\cf0  \highlight15\cf14\b =\highlight1\cf0\b0  \highlight17\cf16 trainer\highlight15\cf14\b .\highlight17\cf16\b0 train\highlight15\cf14\b ()\highlight1\cf0\b0 \par
+        \highlight17\cf16 iteration\highlight1\cf0  \highlight15\cf14\b +=\highlight1\cf0\b0  \highlight5\cf4 1\highlight1\cf0 \par
+        \highlight11\cf10\b print\highlight1\cf0\b0  \highlight7\cf6 "Iteration: \{0\} Error \{1\}"\highlight15\cf14\b .\highlight17\cf16\b0 format\highlight15\cf14\b (\highlight17\cf16\b0 iteration\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 error\highlight15\cf14\b )\highlight1\cf0\b0 \par
+ \par
+\par
+    \highlight3\cf2 #printing\highlight1\cf0 \par
+    \highlight17\cf16 test\highlight15\cf14\b =[\highlight9\cf8\b0 'pic/giraffe6.png'\highlight15\cf14\b ,\highlight1\cf0\b0 \par
+          \highlight9\cf8 'pic/dog6.png'\highlight15\cf14\b ,\highlight1\cf0\b0 \par
+          \highlight9\cf8 'pic/gorilla6.png'\highlight15\cf14\b ,\highlight1\cf0\b0 \par
+          \highlight9\cf8 'pic/alligator6.png'\highlight15\cf14\b ,\highlight1\cf0\b0 \par
+          \highlight9\cf8 'pic/cat6.png'\highlight1\cf0 \par
+           \highlight15\cf14\b ]\highlight1\cf0\b0  \par
+    \highlight11\cf10\b print\highlight1\cf0\b0  \highlight9\cf8 '\\n\\n===RESULT===='\highlight1\cf0 \par
+    \highlight11\cf10\b for\highlight1\cf0\b0  \highlight17\cf16 pict\highlight1\cf0  \highlight11\cf10\b in\highlight1\cf0\b0  \highlight17\cf16 test\highlight15\cf14\b :\highlight1\cf0\b0 \par
+        \highlight17\cf16 value\highlight15\cf14\b =\highlight17\cf16\b0 net\highlight15\cf14\b .\highlight17\cf16\b0 activate\highlight15\cf14\b (\highlight17\cf16\b0 loadImage\highlight15\cf14\b (\highlight17\cf16\b0 pict\highlight15\cf14\b ))\highlight1\cf0\b0 \par
+        \highlight17\cf16 animalname\highlight15\cf14\b =\highlight17\cf16\b0 detect\highlight15\cf14\b (\highlight17\cf16\b0 value\highlight15\cf14\b )\highlight1\cf0\b0 \par
+        \highlight11\cf10\b print\highlight1\cf0\b0  \highlight7\cf6 "Picture %s has a %s  | with the value= %f"\highlight1\cf0  \highlight15\cf14\b %\highlight1\cf0\b0  \highlight15\cf14\b (\highlight17\cf16\b0 pict\highlight15\cf14\b ,\highlight1\cf0\b0  \highlight17\cf16 animalname\highlight15\cf14\b ,\highlight17\cf16\b0 value\highlight15\cf14\b )\highlight1\cf0\b0 \par
+        \highlight3\cf2 #print "[DEBUG] value of %s is %f" % (pict,value)\highlight1\cf0 \par
+}

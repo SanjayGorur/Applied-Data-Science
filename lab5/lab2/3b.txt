@@ -1,0 +1,59 @@
+Iteration: 1 Error 174.444033283
+Iteration: 2 Error 93.9120415355
+Iteration: 3 Error 121.415395744
+Iteration: 4 Error 110.782029106
+Iteration: 5 Error 64.5378012043
+Iteration: 6 Error 48.0570602851
+Iteration: 7 Error 48.3357118164
+Iteration: 8 Error 38.6493289181
+Iteration: 9 Error 31.4524189426
+Iteration: 10 Error 38.7359380527
+Iteration: 11 Error 26.4201809014
+Iteration: 12 Error 20.7126736743
+Iteration: 13 Error 10.0825790852
+Iteration: 14 Error 8.96572839537
+Iteration: 15 Error 4.95803295892
+Iteration: 16 Error 4.12024307393
+Iteration: 17 Error 3.6623541849
+Iteration: 18 Error 2.87818055114
+Iteration: 19 Error 1.63357677074
+Iteration: 20 Error 1.34930903998
+Iteration: 21 Error 0.667514447526
+Iteration: 22 Error 0.591619719067
+Iteration: 23 Error 0.356110480305
+Iteration: 24 Error 0.258269495857
+Iteration: 25 Error 0.237924121517
+Iteration: 26 Error 0.0893514070504
+Iteration: 27 Error 0.119035735524
+Iteration: 28 Error 0.0438367468381
+Iteration: 29 Error 0.0962676237591
+Iteration: 30 Error 0.0507634160706
+Iteration: 31 Error 0.0297984382855
+Iteration: 32 Error 0.0293199749901
+Iteration: 33 Error 0.0292912062827
+Iteration: 34 Error 0.0324012889859
+Iteration: 35 Error 0.0130926832335
+Iteration: 36 Error 0.0171182371701
+Iteration: 37 Error 0.0091549608088
+Iteration: 38 Error 0.00595996094864
+Iteration: 39 Error 0.00438840040184
+Iteration: 40 Error 0.00143154724614
+Iteration: 41 Error 0.00208205096752
+Iteration: 42 Error 0.00189219886214
+Iteration: 43 Error 0.00183764367477
+Iteration: 44 Error 0.000973867381549
+Iteration: 45 Error 0.000470623880462
+Iteration: 46 Error 0.000394625195401
+Iteration: 47 Error 0.000340006413821
+Iteration: 48 Error 0.000297873931519
+Iteration: 49 Error 0.000207723946418
+Iteration: 50 Error 9.26232413775e-05
+
+
+===RESULT====
+Picture pic/giraffe6.png has a gorilla  | with the value= 22.656134
+Picture pic/dog6.png has a alligator  | with the value= 31.388318
+Picture pic/gorilla6.png has a gorilla  | with the value= 23.295251
+Picture pic/alligator6.png has a alligator  | with the value= 28.514322
+Picture pic/cat6.png has a dog  | with the value= 10.810802
+

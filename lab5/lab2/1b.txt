@@ -1,0 +1,22 @@
+
+the prediction for AND value:
+1 AND 1 =  [ 0.99121504]
+1 AND 0 =  [ 0.00750315]
+0 AND 1 =  [ 0.00755936]
+0 AND 0 =  [-0.03360367]
+
+the prediction for OR value:
+1 OR 1 =  [ 1.]
+1 OR 0 =  [ 1.]
+0 OR 1 =  [ 1.]
+0 OR 0 =  [ 0.]
+
+the prediction for NOT value:
+NOT 0  =  [ 1.]
+NOT 1  =  [  5.15143483e-14]
+
+the prediction for NOR value:
+1 NOR 1 =  [ -5.55111512e-17]
+1 NOR 0 =  [ 0.]
+0 NOR 1 =  [  5.55111512e-17]
+0 NOR 0 =  [ 1.]

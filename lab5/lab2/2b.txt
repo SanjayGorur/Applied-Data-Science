@@ -1,0 +1,28 @@
+Iteration: 1 Error 32.654669888
+Iteration: 2 Error 7.09272174378
+Iteration: 3 Error 1.22956730368
+Iteration: 4 Error 0.923777536299
+Iteration: 5 Error 0.299981573433
+Iteration: 6 Error 0.225016666873
+Iteration: 7 Error 0.0373503522545
+Iteration: 8 Error 0.03710860472
+Iteration: 9 Error 0.0208442579982
+Iteration: 10 Error 0.00407355075457
+Iteration: 11 Error 0.00864096638386
+Iteration: 12 Error 0.00135153501173
+Iteration: 13 Error 0.000743978130981
+Iteration: 14 Error 0.00036305717184
+Iteration: 15 Error 0.000323038824108
+Iteration: 16 Error 0.000380796649312
+Iteration: 17 Error 0.000204303751397
+Iteration: 18 Error 0.000141164238314
+Iteration: 19 Error 5.29297825704e-05
+
+Result:  [ 11.98200559]
+
+Result:  [ 15.09102171]
+
+Result:  [ 9.37929336]
+
+Result:  [ 9.09625699]
+

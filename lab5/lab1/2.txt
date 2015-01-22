@@ -1,0 +1,74 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.024
+Model:                            OLS   Adj. R-squared:                 -0.002
+Method:                 Least Squares   F-statistic:                    0.9258
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):              0.451
+Time:                        18:24:12   Log-Likelihood:                -1278.7
+No. Observations:                 158   AIC:                             2567.
+Df Residuals:                     153   BIC:                             2583.
+Df Model:                           4                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------------
+const               6367.3284   4201.836      1.515      0.132     -1933.778  1.47e+04
+gdp                 4.989e-12   3.12e-11      0.160      0.873     -5.66e-11  6.65e-11
+policy_index          16.6306     31.606      0.526      0.600       -45.810    79.071
+females_education   -130.7897     84.940     -1.540      0.126      -298.596    37.017
+life_expectancy        1.3003      9.139      0.142      0.887       -16.755    19.356
+persons_prosecuted    -0.0182      0.019     -0.948      0.344        -0.056     0.020
+child_victims         -0.6412      0.768     -0.835      0.405        -2.159     0.876
+==============================================================================
+Omnibus:                      191.304   Durbin-Watson:                   0.794
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5184.289
+Skew:                           4.886   Prob(JB):                         0.00
+Kurtosis:                      29.306   Cond. No.                     1.61e+14
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.61e+14. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Outlier:  [22, 23, 24, 25, 26]
+   country  year  persons_prosecuted  Adult_victims  child_victims  \
+22  Brazil  2003                  52           5223              0   
+23  Brazil  2004                 130           2887              0   
+24  Brazil  2005                 128           4348              0   
+25  Brazil  2006                 117           3417              0   
+26  Brazil  2007                 200           5975              0   
+
+             gdp  policy_index  females_education  life_expectancy  
+22  5.524693e+11            10           47.71990               71  
+23  6.637603e+11            11           47.70676               71  
+24  8.821857e+11            12           47.59256               71  
+25  1.088917e+12            11           47.20861               71  
+26  1.366824e+12            11           47.20861               71  
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.153
+Model:                            OLS   Adj. R-squared:                  0.130
+Method:                 Least Squares   F-statistic:                     6.683
+Date:                Wed, 08 Oct 2014   Prob (F-statistic):           5.68e-05
+Time:                        18:24:13   Log-Likelihood:                -1037.2
+No. Observations:                 153   AIC:                             2084.
+Df Residuals:                     148   BIC:                             2100.
+Df Model:                           4                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------------
+const              -3407.2866   1153.837     -2.953      0.004     -5687.410 -1127.163
+gdp                 8.754e-12   8.38e-12      1.044      0.298     -7.81e-12  2.53e-11
+policy_index          -0.3600      8.523     -0.042      0.966       -17.203    16.483
+females_education     82.6792     23.400      3.533      0.001        36.438   128.920
+life_expectancy       -7.1481      2.466     -2.899      0.004       -12.021    -2.275
+persons_prosecuted    -0.0029      0.005     -0.555      0.580        -0.013     0.007
+child_victims          0.3980      0.208      1.913      0.058        -0.013     0.809
+==============================================================================
+Omnibus:                       91.217   Durbin-Watson:                   0.738
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              417.753
+Skew:                           2.289   Prob(JB):                     1.93e-91
+Kurtosis:                       9.676   Cond. No.                     1.64e+14
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.64e+14. This might indicate that there are
+strong multicollinearity or other numerical problems.

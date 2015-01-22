@@ -1,0 +1,97 @@
+Internet penetration VS adult victim:
+(-0.17378602791144523, 0.03168508364587453)
+
+Connected device VS adult victim:
+(-0.023572270737661622, 0.77241153794652262)
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.153
+Model:                            OLS   Adj. R-squared:                  0.130
+Method:                 Least Squares   F-statistic:                     6.683
+Date:                Thu, 09 Oct 2014   Prob (F-statistic):           5.68e-05
+Time:                        09:51:59   Log-Likelihood:                -1037.2
+No. Observations:                 153   AIC:                             2084.
+Df Residuals:                     148   BIC:                             2100.
+Df Model:                           4                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------------
+const              -3407.2646   1153.837     -2.953      0.004     -5687.387 -1127.142
+gdp                 8.744e-12   8.37e-12      1.044      0.298      -7.8e-12  2.53e-11
+policy_index          -0.3599      8.523     -0.042      0.966       -17.203    16.483
+females_education     82.6786     23.400      3.533      0.001        36.437   128.920
+life_expectancy       -7.1480      2.466     -2.899      0.004       -12.021    -2.275
+persons_prosecuted    -0.0029      0.005     -0.555      0.580        -0.013     0.007
+child_victims          0.3980      0.208      1.913      0.058        -0.013     0.809
+==============================================================================
+Omnibus:                       91.217   Durbin-Watson:                   0.738
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              417.756
+Skew:                           2.289   Prob(JB):                     1.93e-91
+Kurtosis:                       9.676   Cond. No.                     1.64e+14
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.64e+14. This might indicate that there are
+strong multicollinearity or other numerical problems.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.164
+Model:                            OLS   Adj. R-squared:                  0.135
+Method:                 Least Squares   F-statistic:                     5.760
+Date:                Thu, 09 Oct 2014   Prob (F-statistic):           6.94e-05
+Time:                        09:51:59   Log-Likelihood:                -1036.3
+No. Observations:                 153   AIC:                             2085.
+Df Residuals:                     147   BIC:                             2103.
+Df Model:                           5                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------------
+const              -3437.2616   1150.537     -2.988      0.003     -5710.992 -1163.532
+gdp                 1.536e-11   9.63e-12      1.595      0.113     -3.67e-12  3.44e-11
+policy_index          -0.3827      8.497     -0.045      0.964       -17.175    16.410
+females_education     80.6406     23.376      3.450      0.001        34.445   126.836
+life_expectancy       -4.7612      3.006     -1.584      0.115       -10.702     1.180
+persons_prosecuted    -0.0039      0.005     -0.746      0.457        -0.014     0.006
+child_victims          0.3724      0.208      1.788      0.076        -0.039     0.784
+internet_penet        -1.8272      1.324     -1.380      0.170        -4.445     0.790
+==============================================================================
+Omnibus:                       90.949   Durbin-Watson:                   0.747
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              417.275
+Skew:                           2.279   Prob(JB):                     2.45e-91
+Kurtosis:                       9.684   Cond. No.                     1.64e+14
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.64e+14. This might indicate that there are
+strong multicollinearity or other numerical problems.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Adult_victims   R-squared:                       0.156
+Model:                            OLS   Adj. R-squared:                  0.127
+Method:                 Least Squares   F-statistic:                     5.435
+Date:                Thu, 09 Oct 2014   Prob (F-statistic):           0.000128
+Time:                        09:51:59   Log-Likelihood:                -1037.0
+No. Observations:                 153   AIC:                             2086.
+Df Residuals:                     147   BIC:                             2104.
+Df Model:                           5                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------------
+const              -3556.1615   1173.716     -3.030      0.003     -5875.698 -1236.625
+gdp                -9.496e-12   2.65e-11     -0.359      0.720     -6.18e-11  4.28e-11
+policy_index          -1.1579      8.607     -0.135      0.893       -18.168    15.852
+females_education     85.7290     23.811      3.600      0.000        38.674   132.784
+life_expectancy       -7.1508      2.470     -2.895      0.004       -12.032    -2.269
+persons_prosecuted    -0.0114      0.013     -0.888      0.376        -0.037     0.014
+child_victims          0.4081      0.209      1.954      0.053        -0.005     0.821
+connected_dev       8.891e-07   1.22e-06      0.726      0.469     -1.53e-06  3.31e-06
+==============================================================================
+Omnibus:                       92.312   Durbin-Watson:                   0.741
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              433.177
+Skew:                           2.310   Prob(JB):                     8.65e-95
+Kurtosis:                       9.826   Cond. No.                     1.67e+14
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.67e+14. This might indicate that there are
+strong multicollinearity or other numerical problems.
